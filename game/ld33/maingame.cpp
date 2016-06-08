@@ -111,9 +111,9 @@ void MainGameState::loadMainRendergraph(void)
 	mainPlayGraph.add(obj2d_Fullscreen(-1, rm.gettexture("background.back1")));
 
 	// load the tilemap
-	tilemap.load("ld33\\data\\map1_a.tga", glzTileType::DOUBLE_LAYER);
-	tilemap2.load("ld33\\data\\map1_b.tga", glzTileType::DOUBLE_LAYER);
-	tilemap3.load("ld33\\data\\map1_d.tga", glzTileType::QUAD_LAYER);
+	tilemap.load("data\\map1_a.tga", glzTileType::DOUBLE_LAYER);
+	tilemap2.load("data\\map1_b.tga", glzTileType::DOUBLE_LAYER);
+	tilemap3.load("data\\map1_d.tga", glzTileType::QUAD_LAYER);
 
 	mainPlayGraph.add(obj2d_Tiles(42, &tilemap, 0, 16, 16, 1.0, nullptr, node3(vert3(-240, -150.0, 0.0)), rm.gettexture("atlas.tileset"), 128, 1.0f));
 	mainPlayGraph.add(obj2d_Tiles(42, &tilemap, 1, 16, 16, 1.0, nullptr, node3(vert3(-240, -150.0, 0.0)), rm.gettexture("atlas.tileset"), 128, 1.0f));
@@ -234,7 +234,7 @@ bool MainGameState::Initialize(int width, int height)					// Any GL Init Code & 
 	glGenerateMipmapEXT = (PFNGLGENERATEMIPMAPEXTPROC)wglGetProcAddress("glGenerateMipmapEXT");
 
 	
-	ProgramObject = glzShaderLoad("ld33\\data\\glsl.vert", "ld33\\data\\glsl.frag", glzVAOType::AUTO);
+	ProgramObject = glzShaderLoad("data\\glsl.vert", "data\\glsl.frag", glzVAOType::AUTO);
 	
 	glzShaderLink(ProgramObject);
 
@@ -392,6 +392,9 @@ if (gamestate == gamestates::PLAY)
 	
 
 	cam.update(seconds);
+}
+
+
 
 	n.tick(seconds);
 	mainPlayGraph.update(seconds);
