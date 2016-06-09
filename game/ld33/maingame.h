@@ -97,6 +97,7 @@ private:
 		float y;
 		bool heading_left;
 		bool walking;
+		bool playing;
 		bool punching;
 	} playerstruct;
 

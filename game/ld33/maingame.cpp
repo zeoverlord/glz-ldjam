@@ -244,6 +244,7 @@ bool MainGameState::Initialize(int width, int height)					// Any GL Init Code & 
 	pl.heading_left = false;
 	pl.punching = false;
 	pl.walking = false;
+	pl.playing = false;
 
 
 	// load the textures
@@ -366,7 +367,7 @@ if (gamestate == gamestates::PLAY)
 		pl.heading_left = false;
 		pl.x += seconds * 50;
 		if (pl.x > 996.0f) pl.x = 996.0f;
-		pl.walking = true;
+		pl.walking = true;		
 		pl.pos.pos.x = pl.x - 250;
 		pl.pos.tick(seconds);
 		player.set(1, glzOBject2DSetvar::NODE_LOCAL, pl.pos);
@@ -374,8 +375,16 @@ if (gamestate == gamestates::PLAY)
 	}
 
 
-	if (pl.walking) player.set(1, glzOBject2DSetvar::ANIMATIONPLAY);
-	else player.set(1, glzOBject2DSetvar::ANIMATIONSTOP);
+	if ((pl.walking) && (!pl.playing))
+	{
+		player.set(1, glzOBject2DSetvar::ANIMATIONPLAY);
+		pl.playing = true;
+	}
+	else if (!pl.walking)
+	{
+		player.set(1, glzOBject2DSetvar::ANIMATIONSTOP);
+		pl.playing = false;
+	}
 
 
 	if (input.getKeyState(VK_RIGHT) == TRUE) camctrl_x -= seconds * 100;
@@ -392,13 +401,14 @@ if (gamestate == gamestates::PLAY)
 	
 
 	cam.update(seconds);
+	n.tick(seconds);
+	mainPlayGraph.update(seconds);
+	player.update(seconds);
 }
 
 
 
-	n.tick(seconds);
-	mainPlayGraph.update(seconds);
-	player.update(seconds);
+
 
 	if (input.getKeyState('1') == TRUE) gamestate = gamestates::PLAY;
 	
