@@ -302,14 +302,7 @@ void MainGameState::Update(float seconds)								// Perform Motion Updates Here
 			colright = level_1_d.getTilecolision(playerpos.x + 0.1, level_1_d.height - playerpos.y + 0.5, 1, true);
 
 		}
-
-
-	//	if (input.getKeyState('W'))
-	//	{
-	//		player_movedir = 3;
-	//	}
-
-
+		
 		if (input.getKeyState('W') && colup) { playerpos.y += seconds*5.0; player_is_moving = true;	player_movedir = 3; }
 		if (input.getKeyState('S') && coldown) { playerpos.y -= seconds*5.0; player_is_moving = true; player_movedir = 0; }
 
