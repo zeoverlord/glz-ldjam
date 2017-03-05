@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F2F2DFC7-7B36-45B7-A5F4-347703CFCD86}</ProjectGuid>
+    <RootNamespace>glzexample2d</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\bin\ld29\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\bin\ld29\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>..\..\bin\ld29\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>..\..\bin\ld29\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\game\ld29\bootStrap_maingame.cpp" />
+    <ClCompile Include="..\..\game\ld29\gamedata_load.cpp" />
+    <ClCompile Include="..\..\game\ld29\maingame.cpp" />
+    <ClCompile Include="..\..\glz-basecode\win\stdafx.cpp" />
+    <ClCompile Include="..\..\glz-basecode\win\zeobase2.cpp" />
+    <ClCompile Include="..\..\glz-core\2d\2d-graph.cpp" />
+    <ClCompile Include="..\..\glz-core\2d\2d-utilities.cpp" />
+    <ClCompile Include="..\..\glz-core\2d\geo-2d.cpp" />
+    <ClCompile Include="..\..\glz-core\3d\geo-generate.cpp" />
+    <ClCompile Include="..\..\glz-core\3d\geo.cpp" />
+    <ClCompile Include="..\..\glz-core\app\appbase.cpp" />
+    <ClCompile Include="..\..\glz-core\effects\particle.cpp" />
+    <ClCompile Include="..\..\glz-core\image\tex.cpp" />
+    <ClCompile Include="..\..\glz-core\input\input.cpp" />
+    <ClCompile Include="..\..\glz-core\layout\viewport.cpp" />
+    <ClCompile Include="..\..\glz-core\shader\shader.cpp" />
+    <ClCompile Include="..\..\glz-core\state\baseState.cpp" />
+    <ClCompile Include="..\..\glz-core\state\stateManager.cpp" />
+    <ClCompile Include="..\..\glz-core\utilities\color.cpp" />
+    <ClCompile Include="..\..\glz-core\utilities\framebuffer.cpp" />
+    <ClCompile Include="..\..\glz-core\utilities\glz.cpp" />
+    <ClCompile Include="..\..\glz-core\utilities\resourcemanager.cpp" />
+    <ClCompile Include="..\..\glz-core\utilities\sprite.cpp" />
+    <ClCompile Include="..\..\glz-core\utilities\tiletools.cpp" />
+    <ClCompile Include="..\..\glz-core\utilities\type.cpp" />
+    <ClCompile Include="..\..\glz-core\utilities\vectormath.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\game\ld29\bass.h" />
+    <ClInclude Include="..\..\game\ld29\gamedata_load.h" />
+    <ClInclude Include="..\..\game\ld29\maingame.h" />
+    <ClInclude Include="..\..\glz-basecode\win\Resource.h" />
+    <ClInclude Include="..\..\glz-basecode\win\stdafx.h" />
+    <ClInclude Include="..\..\glz-basecode\win\targetver.h" />
+    <ClInclude Include="..\..\glz-basecode\win\zeobase2.h" />
+    <ClInclude Include="..\..\glz-core\2d\2d-graph.h" />
+    <ClInclude Include="..\..\glz-core\2d\2d-utilities.h" />
+    <ClInclude Include="..\..\glz-core\2d\geo-2d.h" />
+    <ClInclude Include="..\..\glz-core\3d\geo-generate.h" />
+    <ClInclude Include="..\..\glz-core\3d\geo.h" />
+    <ClInclude Include="..\..\glz-core\3d\primitives.h" />
+    <ClInclude Include="..\..\glz-core\app\appbase.h" />
+    <ClInclude Include="..\..\glz-core\effects\particle.h" />
+    <ClInclude Include="..\..\glz-core\image\tex.h" />
+    <ClInclude Include="..\..\glz-core\input\input.h" />
+    <ClInclude Include="..\..\glz-core\layout\viewport.h" />
+    <ClInclude Include="..\..\glz-core\shader\shader-programs.h" />
+    <ClInclude Include="..\..\glz-core\shader\shader.h" />
+    <ClInclude Include="..\..\glz-core\state\baseState.h" />
+    <ClInclude Include="..\..\glz-core\state\stateManager.h" />
+    <ClInclude Include="..\..\glz-core\utilities\color.h" />
+    <ClInclude Include="..\..\glz-core\utilities\framebuffer.h" />
+    <ClInclude Include="..\..\glz-core\utilities\glz.h" />
+    <ClInclude Include="..\..\glz-core\utilities\resourcemanager.h" />
+    <ClInclude Include="..\..\glz-core\utilities\sprite.h" />
+    <ClInclude Include="..\..\glz-core\utilities\tiletools.h" />
+    <ClInclude Include="..\..\glz-core\utilities\type.h" />
+    <ClInclude Include="..\..\glz-core\utilities\vectormath.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\glz-basecode\win\zeobase2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\game\ld29\small.ico" />
+    <Image Include="..\..\game\ld29\zeobase2.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

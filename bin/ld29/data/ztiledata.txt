@@ -1,0 +1,3 @@
+levelTex_1: "data\\l1a.tga"
+levelTex_2: "data\\l1b.tga"
+levelTex_d: "data\\l1d.tga"
