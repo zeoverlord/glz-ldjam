@@ -98,8 +98,6 @@ bool MainGameState::Initialize(int width, int height)
 
 	glFrontFace(GL_CCW);
 
-
-
 	glUseProgram				= (PFNGLUSEPROGRAMPROC) wglGetProcAddress("glUseProgram");
 	glGetUniformLocation		= (PFNGLGETUNIFORMLOCATIONPROC) wglGetProcAddress("glGetUniformLocation");                                                                     
 	glUniform1i= (PFNGLUNIFORM1IPROC) wglGetProcAddress("glUniform1i");
@@ -107,12 +105,7 @@ bool MainGameState::Initialize(int width, int height)
 	glUniformMatrix4fv= (PFNGLUNIFORMMATRIX4FVPROC) wglGetProcAddress("glUniformMatrix4fv");
 
 	glBlendColor = (PFNGLBLENDCOLORPROC)wglGetProcAddress("glBlendColor");	
-	glActiveTexture = (PFNGLACTIVETEXTUREPROC)wglGetProcAddress("glActiveTexture");
-
-	
-
-
-
+	glActiveTexture = (PFNGLACTIVETEXTUREPROC)wglGetProcAddress("glActiveTexture");	
 
 	glzMatrix mt;
 	glzMatrix mt2;
@@ -130,20 +123,13 @@ bool MainGameState::Initialize(int width, int height)
 						 2,2,2,1,1,1,1,1,
 						 2,2,2,2,2,2,2,2};
 
-
-
-
-
 	mt.LoadIdentity();
 	mt2.LoadIdentity();
 	mt3.LoadIdentity();
 
 	mo.LoadIdentity();
 	mg.LoadIdentity();
-	mh.LoadIdentity();
-
-
-	
+	mh.LoadIdentity();	
 	
 	//glzTranslatef(mt,-3.9f,1.9f,0);
 	mg.translate(0,0,0);	

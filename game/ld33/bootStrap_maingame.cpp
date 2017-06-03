@@ -35,6 +35,9 @@ void preInitialize(void)
 	stateManager.switchState("mainstate");
 	GLZ::glzAppinitialization app;
 	app.set_title(L"Yet unnamed LD48 game");
-	app.data.ALLOW_RESIZE = true;
+	app.data.ALLOW_RESIZE = false;
+	app.data.START_WINDOWED = false;
+	app.data.START_CENTERED = false;
+	app.data.NATIVE_FULLSCREEN = true;
 	return;
 }

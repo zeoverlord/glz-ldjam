@@ -40,6 +40,9 @@
     <Filter Include="state">
       <UniqueIdentifier>{c7d0191c-ab02-4ed7-be09-1a6373b851cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="image\png">
+      <UniqueIdentifier>{7febe15f-d682-481b-877b-036e01220396}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\glz-basecode\win\stdafx.cpp">
@@ -119,6 +122,18 @@
     </ClCompile>
     <ClCompile Include="..\..\game\ld29\gamedata_load.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\glz-core\image\imagePNG.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\glz-core\image\imageTGA.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\glz-core\image\png\lodepng.cpp">
+      <Filter>image\png</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\glz-core\utilities\filetype.cpp">
+      <Filter>utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +226,21 @@
     </ClInclude>
     <ClInclude Include="..\..\game\ld29\bass.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\glz-core\image\imagePNG.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\glz-core\image\imageTGA.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\glz-core\image\textureData.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\glz-core\image\png\lodepng.h">
+      <Filter>image\png</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\glz-core\utilities\filetype.h">
+      <Filter>utilities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
